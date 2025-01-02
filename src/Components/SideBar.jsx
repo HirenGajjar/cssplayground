@@ -11,20 +11,20 @@ function SideBar() {
   return (
     <div className="relative h-screen">
       <div
-        className={`fixed top-0 left-0 w-64 h-full bg-black text-white p-5 transition-transform duration-300 ${
+        className={`fixed top-0 left-0 w-64 h-full bg-gray-900 text-white p-5 transition-transform duration-300 shadow-lg ${
           isOpen ? "transform translate-x-0" : "transform -translate-x-full"
         }`}
       >
         <button
           onClick={toggleSidebar}
-          className="absolute top-4 right-4 bg-red-500 text-white p-2"
+          className="absolute top-4 right-4 bg-red-600 text-white p-2 rounded-full shadow-md hover:bg-red-700 transition duration-300"
         >
-          X
+          ✕
         </button>
 
         <Link
           to="/glassmorphism"
-          className="block mt-10 text-white hover:text-red-500"
+          className="block mt-10 text-white hover:text-red-500 transition duration-300"
         >
           Glassmorphism
         </Link>
@@ -32,9 +32,9 @@ function SideBar() {
       {!isOpen && (
         <button
           onClick={toggleSidebar}
-          className="fixed top-4 left-4 bg-blue-500 text-white p-2 shadow-lg"
+          className="fixed top-4 left-4 bg-blue-600 text-white p-2 rounded-full shadow-lg hover:bg-blue-700 transition duration-300"
         >
-          →
+          ☰
         </button>
       )}
     </div>
