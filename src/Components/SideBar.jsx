@@ -29,6 +29,12 @@ function SideBar() {
           >
             Glassmorphism
           </Link>
+          <Link
+            to="/border"
+            className="block py-2 px-4 rounded-md text-white hover:bg-gray-700 transition-colors"
+          >
+            Border
+          </Link>
           {/* Add more links here */}
         </nav>
       </div>
