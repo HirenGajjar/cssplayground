@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet";
 
 function Glassmorphism() {
   const [color, setColor] = useState("transparent");
@@ -30,6 +31,9 @@ function Glassmorphism() {
 
   return (
     <div className="flex h-screen overflow-hidden">
+      <Helmet>
+        <title>CSS Playground | Glassmorphism</title>
+      </Helmet>
       <div className="flex-1 flex justify-center items-center bg-white">
         <div
           className="w-[1000px] h-[600px] flex justify-center items-center border border-black"
