@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 function SideBar() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
@@ -11,7 +11,7 @@ function SideBar() {
   return (
     <div className="relative h-screen">
       <div
-        className={`fixed top-0 left-0 w-64 h-full bg-gray-900 text-white p-5 transition-transform duration-300 shadow-lg ${
+        className={`fixed top-0 left-0 w-64 h-screen bg-gray-900 text-white p-5 transition-transform duration-300 shadow-lg ${
           isOpen ? "transform translate-x-0" : "transform -translate-x-full"
         }`}
       >
@@ -24,7 +24,7 @@ function SideBar() {
 
         <Link
           to="/glassmorphism"
-          className="block mt-10 text-white hover:text-red-500 transition duration-300"
+          className="block  text-white hover:text-red-500 transition duration-300"
         >
           Glassmorphism
         </Link>

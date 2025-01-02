@@ -6,10 +6,12 @@ import Glassmorphism from "./Pages/Glassmorphism.jsx";
 function App() {
   return (
     <>
-      <Routes>
-        <Route path="glassmorphism" element={<Glassmorphism />}></Route>
-      </Routes>
-      <SideBar />
+      <div className="max-h-screen overflow-hidden">
+        <Routes>
+          <Route path="glassmorphism" element={<Glassmorphism />}></Route>
+        </Routes>
+        <SideBar />
+      </div>
     </>
   );
 }
