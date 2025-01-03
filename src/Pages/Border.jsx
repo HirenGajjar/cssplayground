@@ -121,7 +121,7 @@ function Border() {
             </select>
           </label>
           <label className="block mb-4">
-            Border Color:
+            Border Color: {borderColor}
             <input
               type="color"
               value={borderColor}
@@ -130,7 +130,7 @@ function Border() {
             />
           </label>
           <label className="block mb-4">
-            Border Width:
+            Border Width: {borderWidth}px
             <input
               type="range"
               min="1"
@@ -141,7 +141,7 @@ function Border() {
             />
           </label>
           <label className="block mb-4">
-            Border Radius:
+            Border Radius: {borderRadius}%
             <input
               type="range"
               min="0"
@@ -152,7 +152,7 @@ function Border() {
             />
           </label>
           <label className="block mb-4">
-            Border Radius Top Left:
+            Border Radius Top Left: {borderRadiusTopLeft}%
             <input
               type="range"
               min="0"
@@ -163,7 +163,7 @@ function Border() {
             />
           </label>
           <label className="block mb-4">
-            Border Radius Top Right:
+            Border Radius Top Right: {borderRadiusTopRight}%
             <input
               type="range"
               min="0"
@@ -174,7 +174,7 @@ function Border() {
             />
           </label>
           <label className="block mb-4">
-            Border Radius Bottom Left:
+            Border Radius Bottom Left: {borderRadiusBottomLeft}%
             <input
               type="range"
               min="0"
@@ -185,7 +185,7 @@ function Border() {
             />
           </label>
           <label className="block mb-4">
-            Border Radius Bottom Right:
+            Border Radius Bottom Right: {borderRadiusBottomRight}%
             <input
               type="range"
               min="0"
