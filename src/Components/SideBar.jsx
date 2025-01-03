@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
+
 function SideBar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -11,7 +12,7 @@ function SideBar() {
   return (
     <div className="relative h-screen">
       <div
-        className={`fixed top-0 left-0 w-64 h-full bg-[#F3F4F6] text-black p-5 transition-transform duration-300 shadow-lg ${
+        className={`fixed top-0 left-0 w-64 h-full bg-[#F3F4F6] text-black p-5 transition-transform duration-300 shadow-3xl ${
           isOpen ? "transform translate-x-0" : "transform -translate-x-full"
         }`}
       >
@@ -23,7 +24,6 @@ function SideBar() {
         </button>
 
         <nav className="mt-10">
-          {/* ADd on hover underline */}
           <Link
             to="/glassmorphism"
             className="block py-2 px-4 rounded-md text-black hover:underline  "
@@ -35,6 +35,18 @@ function SideBar() {
             className="block py-2 px-4 rounded-md text-black hover:underline "
           >
             Border
+          </Link>
+          <Link
+            to="/shadow"
+            className="block py-2 px-4 rounded-md text-black hover:underline "
+          >
+            Shadow
+          </Link>
+          <Link
+            to="/headertext"
+            className="block py-2 px-4 rounded-md text-black hover:underline "
+          >
+            Header Text
           </Link>
           {/* Add more links here */}
         </nav>
