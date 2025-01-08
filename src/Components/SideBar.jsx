@@ -1,13 +1,20 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-
 function SideBar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
   };
+
+  const sideBarLinks = [
+    { slag: "/border", title: "Border" },
+    { slag: "/boxshadow", title: "Box Shadow" },
+    { slag: "/glassmorphism", title: "Glassmorphism" },
+    { slag: "/headertext", title: "Header Text" },
+    { slag: "/textshadow", title: "Text Shadow" },
+  ];
 
   return (
     <div className="relative h-screen">
@@ -24,31 +31,15 @@ function SideBar() {
         </button>
 
         <nav className="mt-10">
-          <Link
-            to="/glassmorphism"
-            className="block py-2 px-4 rounded-md text-black hover:underline  "
-          >
-            Glassmorphism
-          </Link>
-          <Link
-            to="/border"
-            className="block py-2 px-4 rounded-md text-black hover:underline "
-          >
-            Border
-          </Link>
-          <Link
-            to="/shadow"
-            className="block py-2 px-4 rounded-md text-black hover:underline "
-          >
-            Shadow
-          </Link>
-          <Link
-            to="/headertext"
-            className="block py-2 px-4 rounded-md text-black hover:underline "
-          >
-            Header Text
-          </Link>
-          {/* Add more links here */}
+          {sideBarLinks.map((link) => (
+            <Link
+              key={link.slag}
+              to={link.slag}
+              className="block py-2 px-4 rounded-md text-black hover:underline"
+            >
+              {link.title}
+            </Link>
+          ))}
         </nav>
       </div>
       {!isOpen && (

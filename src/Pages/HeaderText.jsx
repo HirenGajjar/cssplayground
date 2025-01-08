@@ -156,7 +156,7 @@ function HeaderText() {
             </select>
           </label>
           <label className="block mb-4">
-            Custom Font Size (optional):
+            Custom Font Size :
             <input
               type="text"
               value={customFontSize}
